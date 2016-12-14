@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <script src="angular.min.js"></script>
+  <body ng-app="">
+      <table border="1px" align="center">
+        <tr>
+          <td align="center"><b>Bimbingan Belajar di Era Belajar<b></td>
+        </tr>
+        <td colspan="1">-------------------------------------------------</td>
+        <tr>
+          <td>
+              <form>
+                Pilih Jenjang Pendidikan
+                <select ng-model="myVar">
+                  <option value="">
+                  <option value="SD">SD
+                  <option value="SMP">SMP
+                  <option value="SMA">SMA
+                  <option value="Umum">Umum
+                </select>
+              </form>
+          </td>
+        </tr> 
+        <tr>
+          <td>
+            <div ng-switch="myVar">
+              <div ng-switch-when="SD">
+                 <h3>Tingkat SD</h3>
+                 <p>Matematika</p>
+                 <p>IPA Terpadu</p>
+                 <p>IPS Terpadu</p>
+                 <p>Bahasa Inggris</p> 
+              </div>
+              <div ng-switch-when="SMP">
+                <h3>Tingkat SMP</h3>
+                  <p>Matematika</p>
+                  <p>Bahasa Inggris</p>
+                  <p>Bahasa Indonesia</p>
+                  <p>IPA Terpadu</p>
+                  <p>IPS Terpadu</p> 
+              </div>
+              <div ng-switch-when="SMA">
+                <h3>Tingkat SMA</h3>
+                  <p>Matematika</p>
+                  <p>Bahasa Inggris</p>
+                  <p>Bahasa Indonesia</p>
+                  <p>Ekonomi</p>
+                  <p>Fisika</p>
+                  <p>Biologi</p>
+                  <p>Akutansi</p>
+
+              </div>
+              <div ng-switch-when="Umum">
+                <h3>Tingkat Umum</h3>
+                  <p>Matematika Dasar</p>
+                  <p>Bahasa Inggris</p>
+                  <p>Bahasa Mandarin</p>
+                  <p>Bahasa Jerman</p>
+                  <p>Bahasa Jepang</p>
+                  <p>Bahasa Arab</p>
+              </div>
+            </div>
+          </td>
+      </tr>
+    </table> 
+  </body>
+</html>
